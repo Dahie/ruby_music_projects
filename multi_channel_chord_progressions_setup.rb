@@ -11,10 +11,9 @@
 #     build a Better way of calling scales and chords ( instead of hardcoding them )
      
 
-require 'rubygems'
 require 'midilib'
-require 'main_midi_logic'
-require 'scales'
+require_relative 'main_midi_logic'
+require_relative 'scales'
 
 duration=["whole","half","quarter"]# ,"8th","16th","32nd","64th"]
 

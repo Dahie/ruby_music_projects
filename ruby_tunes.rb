@@ -1,7 +1,7 @@
 # ruby_tunes
 # built on the shoulders of giants ( ruby_music_projects, practical_ruby_projects,
 # midiator,
-require 'music'
+require_relative 'music'
 
 class TunesConfig
   attr_accessor :channel

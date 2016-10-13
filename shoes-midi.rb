@@ -2,9 +2,8 @@
 # Shoes Minesweeper by que/varyform
 #
 
-require 'music'
-require 'scales'
-require 'rubygems'
+require_relative 'music'
+require_relative 'scales'
 require 'cb-music-theory'
 
 

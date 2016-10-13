@@ -1,7 +1,6 @@
-require 'rubygems'
 require 'midilib'
-require 'main_midi_logic'
-require 'scales'
+require_relative 'main_midi_logic'
+require_relative 'scales'
 
 def to_midi_note(n)
   return 0 if n == 'c'
@@ -17,7 +16,7 @@ def to_midi_note(n)
   return 10 if n == 'A'
   return 11 if n == 'b'
 end
-  
+
 
 duration=["quarter","half","whole"]# ,"8th","16th","32nd","64th"]
 bpm = ARGV[0].to_i

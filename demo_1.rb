@@ -1,6 +1,5 @@
-require 'music'
-require 'scales'
-count=0
+require_relative 'music'
+require_relative 'scales'
 
 number_notes=8
 

@@ -1,5 +1,6 @@
-require'music'
-require'scales'
+require_relative 'music'
+require_relative 'scales'
+
 count=0
 
 # Tryout with a four channel monotone setup

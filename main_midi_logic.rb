@@ -8,9 +8,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-require 'rubygems'
 require 'midilib'
-require 'scales'
+require_relative 'scales'
 
 
 class TimedTrack < MIDI::Track

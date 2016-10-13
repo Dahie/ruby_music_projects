@@ -1,7 +1,6 @@
-require'rubygems'
 require 'midilib'
-require 'rubymusicengine'
-require 'scales'
+require_relative 'rubymusicengine'
+require_relative 'scales'
 
 
 

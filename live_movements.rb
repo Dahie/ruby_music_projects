@@ -10,8 +10,8 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-require'music'
-require'scales'
+require_relative 'music'
+require_relative 'scales'
 
 # Created 3 different sections for mapping over a mixing board
 sect_1=[0,1,2,3]

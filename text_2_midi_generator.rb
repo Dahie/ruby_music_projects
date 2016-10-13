@@ -9,7 +9,6 @@
 # 1 => User input of text 
 # 2 => Read in a text file
 # 3 => User Choose a number of random letters to be generated
-require 'rubygems'
 require 'midilib'
 
 class Array

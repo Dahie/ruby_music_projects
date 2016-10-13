@@ -1,7 +1,6 @@
-require 'music'
-require 'scales'
-require 'rubygems'
-require 'cb-music-theory'
+require_relative 'music'
+require_relative 'scales'
+require 'rb-music'
 
 def play_chord(midi_object,chord,channel,duration,velocity)
   chord.note_values.each{|note|

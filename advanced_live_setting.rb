@@ -6,9 +6,8 @@
 # two on_midi = 2 part Harmonys & 3 on_midi = Triad Chord 
 # movement3 is a 1 min time part played 6 times with 10 seconds of time passing each time
 
-require 'music'
-require 'scales'
-cnt=0
+require_relative 'music'
+require_relative 'scales'
 
 midi = LiveMIDI.new 
 

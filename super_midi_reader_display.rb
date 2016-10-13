@@ -1,9 +1,9 @@
 # Get all measures, so events can be mapped to measures:
-require 'rubygems'
+
 require 'midilib'
 require 'midilib/sequence'
-require 'rubymusicengine'
-require 'scales'
+require_relative 'rubymusicengine'
+require_relative 'scales'
 
 =begin
 This application generates a simple random midi file and then outputs the notes generated and 

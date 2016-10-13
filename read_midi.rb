@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'midilib/sequence'
  
 # Get all measures, so events can be mapped to measures:

@@ -2,10 +2,9 @@
 # Shoes Minesweeper by que/varyform
 #
 
-require 'music'
-require 'scales'
-require 'rubygems'
-require 'cb-music-theory'
+require_relative 'music'
+require_relative 'scales'
+require 'rb-music'
 
 
 LEVELS = { :beginner => [9, 9, 10], :intermediate => [16, 16, 40], :expert => [30, 16, 99] }
