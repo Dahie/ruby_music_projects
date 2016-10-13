@@ -1,6 +1,6 @@
 # Live Movements ( Live Ruby Music Coding )
 # Designed by Gabriel Garrod
-# June 2009 
+# June 2009
 
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -28,7 +28,7 @@ m_1 = Proc.new {
   midi.note_off(ch,nt,0) }
 }
 
-# The Last 4 channels 
+# The Last 4 channels
 m_2 = Proc.new {
   64.times {
   midi.note_on(ch=sect_2[rand(sect_2.size)],nt=todi[rand(todi.length)],vlc=rand(75)+25)
@@ -37,7 +37,7 @@ m_2 = Proc.new {
   midi.note_off(ch,nt,0) }
 }
 
-m_1.call 
+m_1.call
 m_2.call
 
 

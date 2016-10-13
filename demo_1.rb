@@ -1,14 +1,15 @@
 require_relative 'music'
 require_relative 'scales'
 
+count=0
 number_notes=8
 
-midi = LiveMIDI.new 
+midi = LiveMIDI.new
 
-until count > number_notes 
+until count > number_notes
 
 # Channel / Note / Velocity
-puts "note" + " "+"#{count+=1}"
+puts "note #{count+=1}"
 
 midi.note_on(ch=rand(8),note=harmonic_minor[rand(harmonic_minor.length)],vlc=rand(75)+25)
 

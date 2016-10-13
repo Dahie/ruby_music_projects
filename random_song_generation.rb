@@ -31,7 +31,7 @@ s=[ ]
 s.to_midi("scale_song1.mid")
 end
 
-# Calls to the methods 
+# Calls to the methods
 # random_basic_pattern
 # equation_song_1
 scale_song

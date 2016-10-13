@@ -5,8 +5,8 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
-require 'dl/import'
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 require 'unimidi'
 
 module Enumerable
@@ -43,7 +43,7 @@ class LiveMIDI
   def play(channel, note, duration, velocity=100, time=nil)
     on_time = time || Time.now.to_f
     @timer.at(on_time) { note_on(channel, note, velocity) }
-    
+
     off_time = on_time + duration
     @timer.at(off_time) { note_off(channel, note, velocity) }
   end

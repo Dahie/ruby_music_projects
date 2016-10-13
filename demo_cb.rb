@@ -4,6 +4,7 @@ require 'rb-music'
 
 def play_chord(midi_object,chord,channel,duration,velocity)
   chord.note_values.each{|note|
+
     midi_object.note_on(channel,note,velocity)
   }
   #sustain it a bit
@@ -29,7 +30,7 @@ def test_drive_chord(midi_object,root_note,scale,chord,progression,duration = 1)
   chan=rand(8)
   chords = progression.map{|deg|
     root_note.send(scale).harmonized_chord(deg,chord)
-  }    
+  }
   chords.each{|chord|
     play_chord(midi_object,chord,chan,duration,rand(50)+50)
   }
@@ -39,7 +40,7 @@ def test_drive_arpeggio(midi_object,root_note,scale,chord,progression,duration =
   chan=rand(8)
   chords = progression.map{|deg|
     root_note.send(scale).harmonized_chord(deg,chord)
-  }    
+  }
   chords.each{|chord|
     play_arpeggio(midi_object,chord,chan,duration,rand(50)+50)
   }
@@ -47,8 +48,8 @@ end
 
 
 
-midi = LiveMIDI.new 
- 
+midi = LiveMIDI.new
+
 intro = [1,4,5,8]
 part_a = [8,4,8,4,9,7,2,5]
 part_b = [1,3,6,9,5,7,2,5]

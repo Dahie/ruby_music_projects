@@ -19,65 +19,65 @@ class TunePlayer
   end
 
   def play(note, len = 0.5)
-  if(note.class == Array) then
-    note.each { |n|
-      if(n.class == Array) then
-        n.each { |chord_note|
-          MainMidi.note_on(@channel,chord_note,100)
-        }
-        sleep(len)
-        n.each { |chord_note|
-          MainMidi.note_off(@channel,chord_note,0)
+    if(note.class == Array) then
+      note.each { |n|
+        if(n.class == Array) then
+          n.each { |chord_note|
+            MainMidi.note_on(@channel,chord_note,100)
+          }
+          sleep(len)
+          n.each { |chord_note|
+            MainMidi.note_off(@channel,chord_note,0)
 
-        }
-      else
-        MainMidi.note_on(@channel,n,100)
-        sleep(len)
-        MainMidi.note_off(@channel,n,0)
-      end
-    }
-    return
+          }
+        else
+          MainMidi.note_on(@channel,n,100)
+          sleep(len)
+          MainMidi.note_off(@channel,n,0)
+        end
+      }
+      return
+    end
+    MainMidi.note_on(@channel,note,100)
+    sleep(len)
+    MainMidi.note_off(@channel,note,0)
   end
-  MainMidi.note_on(@channel,note,100)
-  sleep(len)
-  MainMidi.note_off(@channel,note,0)
-end
 
-def instrument(inst)
-  MainMidi.program_change(@channel, inst)
-end
+  def instrument(inst)
+    MainMidi.program_change(@channel, inst)
+  end
 
 end
 
 MainMidi = LiveMIDI.new
-Configs = TunesConfig.new 1
+configs = TunesConfig.new 1
 
 def play(note, len = 0.5)
   if(note.class == Array) then
     note.each { |n|
       if(n.class == Array) then
         n.each { |chord_note|
-          MainMidi.note_on(Configs.channel,chord_note,100)
+          MainMidi.note_on(configs.channel,chord_note,100)
         }
         sleep(len)
         n.each { |chord_note|
-          MainMidi.note_off(Configs.channel,chord_note,0)
-          
+          MainMidi.note_off(configs.channel,chord_note,0)
+
         }
       else
-        MainMidi.note_on(Configs.channel,n,100)
+        MainMidi.note_on(configs.channel,n,100)
         sleep(len)
-        MainMidi.note_off(Configs.channel,n,0)
+        MainMidi.note_off(configs.channel,n,0)
       end
     }
     return
   end
-  MainMidi.note_on(Configs.channel,note,100)
+  MainMidi.note_on(configs.channel,note,100)
   sleep(len)
-  MainMidi.note_off(Configs.channel,note,0)
+  MainMidi.note_off(configs.channel,note,0)
 end
 
 def instrument(inst)
-  MainMidi.program_change(Configs.channel, inst)
+  MainMidi.program_change(configs.channel, inst)
 end
 
