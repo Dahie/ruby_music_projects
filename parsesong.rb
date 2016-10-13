@@ -2,19 +2,23 @@ require 'midilib'
 require_relative 'main_midi_logic'
 require_relative 'scales'
 
-def to_midi_note(n)
-  return 0 if n == 'c'
-  return 1 if n == 'C'
-  return 2 if n == 'd'
-  return 3 if n == 'D'
-  return 4 if n == 'e'
-  return 5 if n == 'f'
-  return 6 if n == 'F'
-  return 7 if n == 'g'
-  return 8 if n == 'G'
-  return 9 if n == 'a'
-  return 10 if n == 'A'
-  return 11 if n == 'b'
+NOTE_MAPPING = {
+  'c' => 0,
+  'C' => 1,
+  'd' => 2,
+  'D' => 3,
+  'e' => 4,
+  'f' => 5,
+  'F' => 6,
+  'g' => 7,
+  'G' => 8,
+  'a' => 9,
+  'A' => 10,
+  'b' => 11,
+}
+
+def to_midi_note(note)
+  NOTE_MAPPING[note]
 end
 
 duration = %w(quarter half whole) # 8th 16th 32nd 64th)
